@@ -9,7 +9,6 @@
 
     = stylesheet_link_tag "application", media: "all"
     = stylesheet_link_tag "bootstrap.min"
-    = stylesheet_link_tag "bootstrap-responsive.min"
     = stylesheet_link_tag "font-awesome.min"
     = stylesheet_link_tag "magnific-popup"
     = stylesheet_link_tag "creative.min"
@@ -19,10 +18,8 @@
 
     = javascript_include_tag "application"
     = yield :javascript if content_for?(:javascript)
-    = javascript_include_tag params[:controller]
 
   %body#page-top{:class=> "#{controller_name} #{action_name}" }
-    - byebug
     = yield
 
 

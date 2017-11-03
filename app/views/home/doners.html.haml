@@ -1,0 +1,15 @@
+.container
+  %button.btn-info#btn-home
+    %a{:href => "/"} Home
+  .header.text-center
+    %h2 Doners List
+  %hr
+  %table.table.table-bordered.table-hover
+    %thead
+      %tr
+        %th.col-xs-2 #
+        %th.col-xs-4 Name
+        %th.col-xs-4 Date
+        %th.col-xs-2 Donated Amount
+    %tbody
+      = render 'doner_list'

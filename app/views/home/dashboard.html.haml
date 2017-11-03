@@ -1,97 +1,77 @@
-!!!
-%html{:lang => "en"}
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}/
-
-    %title KamaleshwarJirnodhar
-
-    = stylesheet_link_tag "application", media: "all"
-    = stylesheet_link_tag "bootstrap.min"
-    = stylesheet_link_tag "font-awesome.min"
-    = stylesheet_link_tag "magnific-popup"
-    = stylesheet_link_tag "creative.min"
-
-    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"          , :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic", :rel => "          stylesheet", :type => "text/css"}/
-
-    = javascript_include_tag "application"
-    = yield :javascript if content_for?(:javascript)
-
-  %body#page-top{:class=> "#{controller_name} #{action_name}" }
-    %nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
-      .container
-        %a.navbar-brand.js-scroll-trigger{:href => "#page-top"} Kamaleshwar Jirnodhar
-        %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
-          %span.navbar-toggler-icon
-        #navbarResponsive.collapse.navbar-collapse
-          %ul.navbar-nav.ml-auto
-            %li.nav-item
-              %a.nav-link.js-scroll-trigger{:href => "#about"} About
-            %li.nav-item
-              %a.nav-link.js-scroll-trigger{:href => "#services"} Services
-            %li.nav-item
-              %a.nav-link.js-scroll-trigger{:href => "#portfolio"} Portfolio
-            %li.nav-item
-              %a.nav-link.js-scroll-trigger{:href => "#contact"} Contact
-    %header.masthead
-      .header-content
-        .header-content-inner
-    %section#about.bg-primary
-      .container
-        .row
-          .col-lg-8.mx-auto.text-center
-            %h2.section-heading.text-white We've got what you need!
-            %hr.light/
-            %p.text-faded Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
-    %section#services
-      .container
-        .row
-          .col-lg-12.text-center
-            %h2.section-heading Work In Progress....
-    %section#portfolio.p-0
-      .container-fluid
-        .row.no-gutter.popup-gallery
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "/images/portfolio/fullsize/m2.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m2.jpg"}/
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "/images/portfolio/fullsize/m2.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m2.jpg"}/
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "/images/portfolio/fullsize/m3.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m3.jpg"}/
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "images/portfolio/fullsize/m4.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m4.jpg"}/
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "/images/portfolio/fullsize/m6.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m6.jpg"}/
-          .col-lg-4.col-sm-6
-            %a.portfolio-box{:href => "/images/portfolio/fullsize/m6.jpg"}
-              %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m6.jpg"}/
-    %section#services
-      .container
-        .row
-          .col-lg-12.text-center
-            %h2.section-heading Our Target
-    %section#target
-      .container-fluid
-        %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m1.jpg"}/
-    %section#contact
-      .container
-        .row
-          .col-lg-8.mx-auto.text-center
-            %h2.section-heading Let's Get In Touch!
-            %hr.primary/
-            %p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
-        .row
-          .col-lg-4.ml-auto.text-center
-            %i.fa.fa-phone.fa-3x.sr-contact
-            %p 123-456-6789
-          .col-lg-4.mr-auto.text-center
-            %i.fa.fa-envelope-o.fa-3x.sr-contact
-            %p
-              %a{:href => "mailto:your-email@your-domain.com"} feedback@startbootstrap.com
+%nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+  .container
+    %a.navbar-brand.js-scroll-trigger{:href => "#page-top"} Kamaleshwar Jirnodhar
+    %button.navbar-toggler.navbar-toggler-right{"aria-controls" => "navbarResponsive", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarResponsive", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
+        %li.nav-item
+          %a.nav-link.js-scroll-trigger{:href => "#about"} About
+        %li.nav-item
+          %a.nav-link.js-scroll-trigger{:href => "#services"} Work
+        %li.nav-item
+          %a.nav-link.js-scroll-trigger{:href => "#target"} Target
+        %li.nav-item
+          %a.nav-link{:href=> "/doners"} Doners
+        %li.nav-item
+          %a.nav-link.js-scroll-trigger{:href => "#contact"} Contact
+%header.masthead
+  .header-content
+    .header-content-inner
+%section#about.bg-primary
+  .container
+    .row
+      .col-lg-8.mx-auto.text-center
+        %h2.section-heading.text-white We've got what you need!
+        %hr.light/
+        %p.text-faded Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+%section#services
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Work In Progress....
+%section#portfolio.p-0
+  .container-fluid
+    .row.no-gutter.popup-gallery
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "/images/portfolio/fullsize/m2.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m2.jpg"}/
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "/images/portfolio/fullsize/m2.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m2.jpg"}/
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "/images/portfolio/fullsize/m3.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m3.jpg"}/
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "images/portfolio/fullsize/m4.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m4.jpg"}/
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "/images/portfolio/fullsize/m6.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m6.jpg"}/
+      .col-lg-4.col-sm-6
+        %a.portfolio-box{:href => "/images/portfolio/fullsize/m6.jpg"}
+          %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m6.jpg"}/
+%section#services
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading Our Target
+%section#target
+  .container-fluid
+    %img.img-fluid{:alt => "", :src => "/images/portfolio/thumbnails/m1.jpg"}/
+%section#contact
+  .container
+    .row
+      .col-lg-8.mx-auto.text-center
+        %h2.section-heading Let's Get In Touch!
+        %hr.primary/
+        %p Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!
+    .row
+      .col-lg-4.ml-auto.text-center
+        %i.fa.fa-phone.fa-3x.sr-contact
+        %p 123-456-6789
+      .col-lg-4.mr-auto.text-center
+        %i.fa.fa-envelope-o.fa-3x.sr-contact
+        %p
+          %a{:href => "mailto:your-email@your-domain.com"} feedback@startbootstrap.com
 

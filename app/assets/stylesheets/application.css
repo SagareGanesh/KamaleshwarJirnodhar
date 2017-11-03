@@ -17,3 +17,7 @@
 #target{
   margin-top: -100px;
 }
+#btn-home{
+  float: right;
+  margin-top: 10px;
+}
